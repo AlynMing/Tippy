@@ -26,11 +26,9 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the required features (TODO: implemented user stories):
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='http://g.recordit.co/ragw4L4fYI.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 
