@@ -35,6 +35,8 @@ Here's a walkthrough of version 2 of the app, with the extended user features (w
 
 <img src = 'http://g.recordit.co/7Vrxrn1R0Z.gif' title='Version 2 Video Walkthrough' width ='30%' alt ='Version 2 Video Walkthrough' /> &nbsp; &nbsp; &nbsp; <img src = 'http://g.recordit.co/8wS5HQjDDL.gif' title='Version 2 Currency Video Walkthrough' width='30%' alt ='Version 2 Currency Video Walkthrough' />
 
+GIFs created with [Recordit](http://recordit.co/).
+
 ## Notes
 
 * Finished required portion of app relatively quickly but ran into some blocks while extending app functionality & design
