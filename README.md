@@ -47,6 +47,12 @@ Here's a walkthrough of version 2 of the app, with the extended user features (w
 * Found myself running into not just technical questions, but design questions - i.e. what’s the best way to let users customize their experience?
 * What to improve/learn next time: figure out how to use auto layout & constraints so that UI works with every kind of screen
 
+## Credits
+
+List an 3rd party libraries, icons, graphics, or other assets you used in your app.
+
+- [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+
 ## License
 
     Copyright 2020 Megan Yu
