@@ -33,7 +33,7 @@ Here's a walkthrough of version 1 of the app, with only the required features:
 
 Here's a walkthrough of version 2 of the app, with the extended user features (walkthrough of locale-specific currency feature shown on right):
 
-<img src = 'http://g.recordit.co/7Vrxrn1R0Z.gif' title='Version 2 Video Walkthrough' width ='30%' alt ='Version 2 Video Walkthrough' /> <img src = 'http://g.recordit.co/8wS5HQjDDL.gif' title='Version 2 Currency Video Walkthrough' width='30%' alt ='Version 2 Currency Video Walkthrough' />
+<img src = 'http://g.recordit.co/7Vrxrn1R0Z.gif' title='Version 2 Video Walkthrough' width ='30%' alt ='Version 2 Video Walkthrough' />          <img src = 'http://g.recordit.co/8wS5HQjDDL.gif' title='Version 2 Currency Video Walkthrough' width='30%' alt ='Version 2 Currency Video Walkthrough' />
 
 ## Notes
 
