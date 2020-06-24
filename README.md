@@ -38,14 +38,14 @@ Here's a walkthrough of version 2 of the app, with the extended user features (w
 ## Notes
 
 * Finished required portion of app relatively quickly but ran into some blocks while extending app functionality & design
-* Got stuck on updating a UISegmentedControl with data from NSUserDefaults, but tinkered around and finally figured out how to set selected segment/customize UISegmentedControl
-* Still unsure of best practice for animating views - I did manage to animate two views on one screen but it may not have been the optimal way to animate, or honestly the best design choice
+* Got stuck on updating a UISegmentedControl with data from NSUserDefaults, but tinkered around and now have a better idea of how to work with NSUserDefaults and how to customize UISegmentedControl
+* Tried animating views - I did manage to animate two views on one screen but probably not in the best way
 * Also learned about:
     * How to set placeholder text for text fields!
     * How to access and use information about current locale!
     * Beginning to understand the idea behind outlets
 * Found myself running into not just technical questions, but design questions - i.e. what’s the best way to let users customize their experience?
-* What to improve: figure out how to use auto layout & constraints so that UI layout works with every kind of screen
+* What to improve/learn next time: figure out how to use auto layout & constraints so that UI works with every kind of screen
 
 ## License
 
