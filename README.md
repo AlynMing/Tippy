@@ -29,15 +29,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of version 1 of the app, with only the required features:
 
-<img src='http://g.recordit.co/ragw4L4fYI.gif' title='Version 1 Video Walkthrough' width='' alt='Version 1 Video Walkthrough' />
+<img src='http://g.recordit.co/ragw4L4fYI.gif' title='Version 1 Video Walkthrough' width='40%' alt='Version 1 Video Walkthrough' />
 
 Here's a walkthrough of version 2 of the app, with the extended user features:
 
-<img src = 'http://g.recordit.co/7Vrxrn1R0Z.gif' title='Version 2 Video Walkthrough' width ='' alt ='Version 2 Video Walkthrough' />
+<img src = 'http://g.recordit.co/7Vrxrn1R0Z.gif' title='Version 2 Video Walkthrough' width ='40%' alt ='Version 2 Video Walkthrough' />
 
 Here's a walkthrough of the locale-specific currency feature in version 2:
 
-<img src = 'http://g.recordit.co/8wS5HQjDDL.gif' title='Version 2 Currency Video Walkthrough' width ='' alt ='Version 2 Currency Video Walkthrough' />
+<img src = 'http://g.recordit.co/8wS5HQjDDL.gif' title='Version 2 Currency Video Walkthrough' width='40%' alt ='Version 2 Currency Video Walkthrough' />
 
 ## Notes
 
