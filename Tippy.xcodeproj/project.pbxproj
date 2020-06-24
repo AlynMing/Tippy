@@ -16,6 +16,7 @@
 		712906AB24A2975F00550D2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 712906AA24A2975F00550D2F /* main.m */; };
 		712906B524A2975F00550D2F /* TippyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712906B424A2975F00550D2F /* TippyTests.m */; };
 		712906C024A2975F00550D2F /* TippyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712906BF24A2975F00550D2F /* TippyUITests.m */; };
+		712906CF24A2AEEC00550D2F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712906CE24A2AEEC00550D2F /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		712906BB24A2975F00550D2F /* TippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		712906BF24A2975F00550D2F /* TippyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TippyUITests.m; sourceTree = "<group>"; };
 		712906C124A2975F00550D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		712906CD24A2AEEC00550D2F /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		712906CE24A2AEEC00550D2F /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				7129069C24A2975F00550D2F /* SceneDelegate.m */,
 				7129069E24A2975F00550D2F /* ViewController.h */,
 				7129069F24A2975F00550D2F /* ViewController.m */,
+				712906CD24A2AEEC00550D2F /* SettingsViewController.h */,
+				712906CE24A2AEEC00550D2F /* SettingsViewController.m */,
 				712906A124A2975F00550D2F /* Main.storyboard */,
 				712906A424A2975F00550D2F /* Assets.xcassets */,
 				712906A624A2975F00550D2F /* LaunchScreen.storyboard */,
@@ -269,6 +274,7 @@
 			files = (
 				712906A024A2975F00550D2F /* ViewController.m in Sources */,
 				7129069A24A2975F00550D2F /* AppDelegate.m in Sources */,
+				712906CF24A2AEEC00550D2F /* SettingsViewController.m in Sources */,
 				712906AB24A2975F00550D2F /* main.m in Sources */,
 				7129069D24A2975F00550D2F /* SceneDelegate.m in Sources */,
 			);
