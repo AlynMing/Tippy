@@ -11,6 +11,9 @@
 @interface SettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipControl;
+@property (weak, nonatomic) IBOutlet UISlider *customTipSlider;
+@property (weak, nonatomic) IBOutlet UILabel *customTipLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *darkMode;
 
 @end
 
@@ -19,6 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // load key from NSUserDefaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    double doubleValue = [defaults doubleForKey:@"default_tip_percentage"];
+    int defaultIndex = (int) [defaults integerForKey:@"default_tip_control_segment"];
+    
+    [self.defaultTipControl setSelectedSegmentIndex:defaultIndex];
+    
+    if (defaultIndex == 3) {
+        self.customTipSlider.alpha = 1;
+        self.customTipLabel.alpha = 1;
+        self.customTipSlider.value = doubleValue * 100;
+        self.customTipLabel.text = [NSString stringWithFormat:@"%.1f%%", doubleValue * 100];
+    } else {
+        self.customTipSlider.alpha = 0;
+        self.customTipLabel.alpha = 0;
+    }
+    
+    NSLog(@"View will appear");
 }
 
 /*
@@ -32,13 +58,26 @@
 */
 
 - (IBAction)onEdit:(id)sender {
-    NSArray *percentages = @[@(0.15), @(0.2), @(0.22)];
+    int defaultTipControlSegment = (int) self.defaultTipControl.selectedSegmentIndex;
+    double defaultTipPercentage;
     
-    double defaultTipPercentage = [percentages[self.defaultTipControl.selectedSegmentIndex] doubleValue];
+    if (defaultTipControlSegment < 3) {
+        self.customTipSlider.alpha = 0;
+        self.customTipLabel.alpha = 0;
+        NSArray *percentages = @[@(0.15), @(0.2), @(0.22)];
+        defaultTipPercentage = [percentages[defaultTipControlSegment] doubleValue];
+    } else {
+        self.customTipSlider.alpha = 1;
+        self.customTipLabel.alpha = 1;
+        self.customTipLabel.text = [NSString stringWithFormat:@"%.1f%%", self.customTipSlider.value];
+        defaultTipPercentage = self.customTipSlider.value / 100.0;
+    }
     
-    // save a key to NSUserDefaults
+    
+    // save keys to NSUserDefaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setDouble:defaultTipPercentage forKey:@"default_tip_percentage"];
+    [defaults setInteger:defaultTipControlSegment forKey:@"default_tip_control_segment"];
     [defaults synchronize];
 }
 
