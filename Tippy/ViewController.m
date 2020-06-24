@@ -41,15 +41,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.billField.placeholder = @"$";
+    self.billField.placeholder = [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol];
+    
     // load key from NSUserDefaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     double doubleValue = [defaults doubleForKey:@"default_tip_percentage"];
     int defaultIndex = (int) [defaults integerForKey:@"default_tip_control_segment"];
     
-    //TODO: find a way to modify UISegmentedControl to reflect new defaults
     [self.tipControl setSelectedSegmentIndex:defaultIndex];
-    
     if (defaultIndex == 3) {
         self.customTipSlider.alpha = 1;
         self.customTipLabel.alpha = 1;
@@ -61,7 +60,15 @@
     }
     
     [self.billField becomeFirstResponder];
-    NSLog(@"View will appear");
+    
+    self.totalLabel1.numberOfLines = 1;
+    self.totalLabel1.adjustsFontSizeToFitWidth = YES;
+    self.totalLabel2.numberOfLines = 1;
+    self.totalLabel2.adjustsFontSizeToFitWidth = YES;
+    self.totalLabel3.numberOfLines = 1;
+    self.totalLabel3.adjustsFontSizeToFitWidth = YES;
+    self.totalLabelCustom.numberOfLines = 1;
+    self.totalLabelCustom.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -83,7 +90,6 @@
 }
 
 - (IBAction)onTap:(id)sender {
-    NSLog(@"Hello");
     [self.view endEditing:YES];
 }
 
@@ -107,18 +113,24 @@
     double tip = tipPercentage * bill;
     double total = bill + tip;
     
-    self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
-    self.totalLabel1.text = [NSString stringWithFormat:@"$%.2f", total];
-    self.totalLabel2.text = [NSString stringWithFormat:@"$%.2f", total / 2];
-    self.totalLabel3.text = [NSString stringWithFormat:@"$%.2f", total / 3];
+    // set up formatting
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    [formatter setGroupingSeparator:groupingSeparator];
+    
+    self.tipLabel.text = [formatter stringFromNumber:[NSNumber numberWithDouble:tip]];;
+    self.totalLabel1.text = [formatter stringFromNumber:[NSNumber numberWithDouble:total]];
+    self.totalLabel2.text = [formatter stringFromNumber:[NSNumber numberWithDouble:total / 2]];
+    self.totalLabel3.text = [formatter stringFromNumber:[NSNumber numberWithDouble:total / 3]];
     
     if (self.customPersonsField.text.length > 0) {
         int numberOfPersons = [self.customPersonsField.text intValue];
-        self.totalLabelCustom.text = [NSString stringWithFormat:@"$%.2f", total / numberOfPersons];
+        self.totalLabelCustom.text = [formatter stringFromNumber:[NSNumber numberWithDouble:total / numberOfPersons]];;
     } else {
         self.totalLabelCustom.text = [NSString stringWithFormat:@"$%.2f", 0.00];
     }
-    
 }
 
 - (IBAction)onEditingBegin:(id)sender {
