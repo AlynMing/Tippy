@@ -4,7 +4,7 @@ Tippy is a tip calculator application for iOS.
 
 Submitted by: Megan Yu
 
-Time spent: 1 hours spent in total
+Time spent: 5 hours spent in total
 
 ## User Stories
 
@@ -14,15 +14,16 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-* [ ] Settings page to change the default tip percentage.
-* [ ] UI animations
+* [x] Settings page to change the default tip percentage.
+* [x] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Added functionality for setting custom tip amount
+- [x] Added functionality for splitting bill among any number of people
 
 ## Video Walkthrough
 
@@ -32,13 +33,14 @@ Here's a walkthrough of the required features (TODO: implemented user stories):
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-
-## Credits
-
-List an 3rd party libraries, icons, graphics, or other assets you used in your app.
-
-- [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+* Finished required portion of app relatively quickly but ran into some blocks while extending app functionality & design
+* Got stuck on updating a UISegmentedControl with data from NSUserDefaults, but tinkered around and finally figured out how to set selected segment/customize UISegmentedControl
+* Still unsure of best practice for animating views - I did manage to animate two views on one screen but it may not have been the optimal way to animate, or honestly the best design choice
+* Also learned about:
+    * How to set placeholder text for text fields!
+    * Beginning to understand the idea behind outlets
+* Found myself running into not just technical questions, but design questions - i.e. what’s the best way to let users customize their experience?
+* What to improve: figure out how to use auto layout & constraints so that UI layout works with every kind of screen
 
 ## License
 
